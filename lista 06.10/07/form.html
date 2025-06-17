@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h2>Formulário</h2>
+    </header>
+
+    <form action="#" method="post">
+        <label class="pergunta" for="name">Nome Completo:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label class="pergunta">Sexo:</label><br>
+        <span>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Masculino</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Feminino</label>
+        </span>
+        <br><br>
+
+        <label class="pergunta">Estado Civil:</label><br>
+        <span>
+            <input type="radio" id="single" name="civil" value="single">
+            <label for="single">Solteiro</label>
+            <input type="radio" id="married" name="civil" value="married">
+            <label for="married">Casado</label>    
+        </span>
+        <br><br>
+
+        <label class="pergunta">Interesses:</label><br>
+        <span>
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music">Música</label>
+            <input type="checkbox" id="movies" name="interests" value="movies">
+            <label for="movies">Filmes</label>
+            <input type="checkbox" id="books" name="interests" value="books">
+            <label for="books">Livros</label>
+        </span>
+        <br><br>
+
+        <label class="pergunta" for="address">Endereço:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label class="pergunta" for="city">Cidade:</label>
+        <input type="text" id="city" name="city" required><br><br>   
+
+        <label class="pergunta" for="state">UF:</label>
+        <select id="state" name="state" required>
+            <option value="" selected disabled hidden>Escolha</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+        <br><br>
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
