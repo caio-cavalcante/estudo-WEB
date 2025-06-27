@@ -1,0 +1,20 @@
+body {
+    padding: 0 20% 0 20%;
+    margin: 0 2% 0 2%;
+}
+
+header, footer h5{
+    text-align: center;
+}
+
+nav ul li {
+    display:inline;
+}
+
+#menu {
+    text-align: center;
+    
+    ul {
+        padding: 0;
+    }
+}
