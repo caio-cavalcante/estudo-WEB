@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+    color: white;
+    font: 12pt arial, sans-serif;
+    margin: 0 22% 0 22%;
+    padding: 0;
+}
+header, footer {
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+header, div {
+    background-color: #111111;
+    padding: 10px 20px 10px 20px;
+}
+nav {
+    margin-bottom: 10px;
+}
+nav ul li {
+    display:inline;
+}
+a {
+    color: #00FF00;
+    text-decoration: none;
+}
+ul {
+    padding: 0%;
+}
