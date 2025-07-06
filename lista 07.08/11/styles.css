@@ -1,0 +1,25 @@
+* {
+    margin: 0, auto;
+    padding: 0;
+}
+header img {
+    width: 50%;
+}
+nav {
+    float: left;
+    text-align: center;
+    margin-left: 10%;
+    padding: 0;
+}
+section {
+    margin-left: 25%;
+    width: 70%;
+}
+footer {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
