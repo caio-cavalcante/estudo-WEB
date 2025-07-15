@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 20px;
+}
+
+table {
+    background-color: #C7E7F3;
+    width: 600px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border: none;
+}
+
+caption {
+    background-color: #0D5188;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #66C5E3;
+    font-weight: bold;
+    padding: 2px;
+    text-align: center;
+}
+
+th.posicao {
+    width: 10%;
+}
+
+th.cidade {
+    width: 40%;
+}
+
+th.populacao {
+    width: 15%;
+}
+
+td {
+    padding: 2px;
+    text-align: center;
+}
+
+.pos-cell {
+    background-color: silver;
+    width: 10%;
+}
+
+.cidade-nome {
+    color: #0D5188;
+    font-weight: bold;
+    background-color: #C7E7F3;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.pop-cell {
+    background-color: #C7E7F3;
+    width: 15%;
+    text-align: center;
+    padding-right: 10px;
+}

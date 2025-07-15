@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 800px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    border: 1px solid #DDDDDD;
+}
+
+thead th {
+    font-size: 13px;
+    color: #999999;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+thead th:nth-child(n+3):not(:last-child) {
+    width: 45px;
+}
+
+thead th:first-child {
+    text-align: left;
+    padding-left: 10px;
+}
+
+tbody td {
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+    padding: 8px 5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+tbody tr.borda-especial {
+    border-bottom: 2px solid #CCCCCC;
+}
+
+tbody td:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.libertadores td:first-child { color: #003366; }
+.pre-libertadores td:first-child { color: #1398BE; }
+.sul-americana td:first-child { color: #DE9800; }
+.zona-neutra td:first-child { color: #CCCCCC; }
+.rebaixados td:first-child { color: #C91B04; }
+
+td.time {
+    font-size: 14px;
+    color: #666666;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+}
+
+td.pontos {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.fundo-cinza {
+    background-color: #F7F7F7;
+}
+
+tfoot td {
+    padding: 15px;
+    text-align: left;
+}
+
+.legenda {
+    margin-bottom: 15px;
+}
+
+.legenda-cor {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.legenda-texto {
+    font-size: 10px;
+    color: #8F8F8F;
+    font-weight: normal;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.legenda-siglas p {
+    margin: 0;
+    padding: 0;
+}
+
+.sigla {
+    font-size: 10px;
+    color: #555555;
+    font-weight: bold;
+}
+
+.significado {
+    font-size: 10px;
+    color: #555555;
+    font-weight: normal;
+    margin-right: 10px;
+}
