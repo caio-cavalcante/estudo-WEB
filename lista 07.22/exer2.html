@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+    <link rel="stylesheet" href="exer2.css">
+</head>
+<body>
+
+    <div class="contact-card">
+        <div class="left-column">
+            <div class="profile-picture">
+                </div>
+            <a href="#" class="change-picture">Change Picture</a>
+        </div>
+
+        <div class="right-column">
+            <header>
+                <h1>Exercício 02</h1>
+            </header>
+            
+            <form>
+                <fieldset class="info-group">
+                    <div class="form-row">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname">
+                    </div>
+                    <div class="form-row">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname">
+                    </div>
+                    <div class="form-row">
+                        <label for="company">Company:</label>
+                        <input type="text" id="company">
+                    </div>
+                    <div class="form-row">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Phone Numbers</legend>
+                    <div class="form-row">
+                        <label for="phone-home">Home:</label>
+                        <input type="tel" id="phone-home">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone-business">Business:</label>
+                        <input type="tel" id="phone-business">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone-mobile">Mobile:</label>
+                        <input type="tel" id="phone-mobile">
+                    </div>
+                     <div class="form-row">
+                        <label for="phone-fax">Fax:</label>
+                        <input type="tel" id="phone-fax">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Addresses</legend>
+                    <div class="address-section">
+                        <div class="address-box">
+                            <p><strong>Business</strong></p>
+                            <input type="text">
+                            <input type="text">
+                            <div class="checkbox-row">
+                                <input type="checkbox" id="mailing-business">
+                                <label for="mailing-business">Mailing Address</label>
+                            </div>
+                        </div>
+                        <div class="address-box">
+                            <p><strong>Home</strong></p>
+                            <textarea rows="2"></textarea>
+                            <div class="checkbox-row">
+                                <input type="checkbox" id="mailing-home">
+                                <label for="mailing-home">Mailing Address</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Internet</legend>
+                     <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email">
+                    </div>
+                     <div class="form-row">
+                        <label for="webpage">Web page:</label>
+                        <input type="url" id="webpage">
+                    </div>
+                     <div class="form-row">
+                        <label for="im">IM:</label>
+                        <input type="text" id="im">
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-save">Save</button>
+                    <button type="button" class="btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
