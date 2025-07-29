@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="exer18.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>OLÁ MUNDO!</h1>
+    
+    <label for="numero">Digite um número: <input type="number" id="numero"></label>
+    <button onclick="isEven(document.getElementById('numero').value)">Verificar</button>
+    <br><br>
+
+    <label for="fatorial">Digite outro número: <input type="number" id="fatorial"></label>
+    <button onclick="alert(fatorial(document.getElementById('fatorial').value))">Calcular Fatorial</button>
+    <br><br>
+
+    <label for="max">Digite alguns números: (separe por vírgula) <input type="text" id="max"></label>
+    <button onclick="alert(maximo(document.getElementById('max').value))">Saiba o máximo</button>
+    <br><br>
+
+    <label for="multiplicar">Digite mais alguns números: (separe por vírgula) <input type="text" id="multiplicar"></label>
+    <br>
+    <label for="multiplicador">Multiplicador: <input type="number" id="multiplicador"></label>
+    <button onclick="alert(multiplicar(document.getElementById('multiplicar').value, document.getElementById('multiplicador').value))">Saiba a multiplicação</button>
+</body>
+</html>
