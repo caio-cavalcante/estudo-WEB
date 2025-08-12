@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário com JavaScript</title>
+    <script>
+        function valida() {
+            var nome = document.getElementById("nome");
+            var email = document.getElementById("email");
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var cidade = document.getElementById("cidade");
+            var estado = document.getElementById("estado");
+            var mensagem = document.getElementById("mensagem");
+            
+            if (nome.value.trim() === "") {
+                alert("Você esqueceu de fornecer seu nome");
+                nome.focus();
+                return;
+            }
+
+            if (!emailRegex.test(email.value.trim())) {
+                alert("Por favor, forneça um email válido");
+                email.focus();
+                return;
+            }
+
+            if (cidade.value.trim() === "") {
+                alert("Você esqueceu de fornecer sua cidade");
+                cidade.focus();
+                return;
+            }
+
+            if (estado.value === "") {
+                alert("Selecione um estado");
+                estado.focus();
+                return;
+            }
+
+            if (mensagem.value.trim() === "") {
+                alert("Você esqueceu de fornecer uma mensagem");
+                mensagem.focus();
+                return;
+            }
+
+            document.getElementById("regform").submit();
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulário de registro</h1>
+    <hr>
+    <form id="regform" name="regform">
+        Nome: <input id="nome" name="nome" type="text" size="20" maxlength="40" value=""><br><br>
+        Email: <input id="email" name="email" type="text" size="30" maxlength="50" value=""><br><br>
+        Cidade: <input id="cidade" name="cidade" type="text" size="20" maxlength="40" value=""><br><br>
+        Estado:
+        <select id="estado" name="estado">
+            <option value="">Selecione</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <option value="MG">MG</option>
+            <option value="ES">ES</option>
+            <!-- Adicione outros estados se necessário -->
+        </select>
+        <br><br>
+        Mensagem:<br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="40"></textarea>
+        <br><br>
+        <input type="button" value="Registrar" onclick="valida()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário com JavaScript</title>
+    <style>
+        #charCounter {
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+    <script>
+        function highlightField(element) {
+            element.style.backgroundColor = '#FFFFE0';
+        }
+
+        function unhighlightField(element) {
+            element.style.backgroundColor = '#FFFFFF';
+        }
+
+        function countChars(element) {
+            var maxLength = 200;
+            var currentLength = element.value.length;
+            var counter = document.getElementById("charCounter");
+            counter.innerHTML = currentLength + "/" + maxLength;
+        }
+
+        function applyPhoneMask(input) {
+            var value = input.value.replace(/\D/g, '');
+            value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+            value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+            input.value = value;
+        }
+
+        function validaFormulario() {
+            var nome = document.getElementById("nome");
+            var email = document.getElementById("email");
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var cidade = document.getElementById("cidade");
+            var estado = document.getElementById("estado");
+            var mensagem = document.getElementById("mensagem");
+
+            if (nome.value.trim() === "") {
+                alert("Você esqueceu de fornecer seu nome");
+                nome.focus();
+                return false; 
+            }
+
+            if (!emailRegex.test(email.value.trim())) {
+                alert("Por favor, forneça um email válido");
+                email.focus();
+                return false;
+            }
+
+            if (cidade.value.trim() === "") {
+                alert("Você esqueceu de fornecer sua cidade");
+                cidade.focus();
+                return false;
+            }
+
+            if (estado.value === "") {
+                alert("Selecione um estado");
+                estado.focus();
+                return false;
+            }
+
+            if (mensagem.value.trim() === "") {
+                alert("Você esqueceu de fornecer uma mensagem");
+                mensagem.focus();
+                return false;
+            }
+
+            var confirmacao = confirm("Deseja realmente submeter os dados do formulário?");
+            return confirmacao; 
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulário de registro</h1>
+    <hr>
+    <form id="regform" name="regform" onsubmit="return validaFormulario()">
+        Nome: 
+        <input id="nome" name="nome" type="text" size="20" maxlength="40" value="" onfocus="highlightField(this)" onblur="unhighlightField(this)"><br><br>
+        
+        Email: 
+        <input id="email" name="email" type="text" size="30" maxlength="50" value="" onfocus="highlightField(this)" onblur="unhighlightField(this)"><br><br>
+
+        Telefone:
+        <input id="telefone" name="telefone" type="text" size="20" maxlength="15" placeholder="(XX) XXXXX-XXXX" onkeyup="applyPhoneMask(this)" onfocus="highlightField(this)" onblur="unhighlightField(this)"><br><br>
+
+        Cidade: 
+        <input id="cidade" name="cidade" type="text" size="20" maxlength="40" value="" onfocus="highlightField(this)" onblur="unhighlightField(this)"><br><br>
+        
+        Estado:
+        <select id="estado" name="estado" onfocus="highlightField(this)" onblur="unhighlightField(this)">
+            <option value="">Selecione</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+        <br><br>
+        
+        Mensagem: <span id="charCounter">0/200</span><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="40" maxlength="200" onkeyup="countChars(this)" onfocus="highlightField(this)" onblur="unhighlightField(this)"></textarea>
+        <br><br>
+        
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>
