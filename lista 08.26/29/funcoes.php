@@ -48,6 +48,29 @@ function validaCPF($cpf) {
     if (strlen($cpfNumerico) != 11) {
         return "O CPF deve conter exatamente 11 dígitos numéricos.";
     }
+
+    if (preg_match('/^(\d)\1{10}$/', $cpfNumerico)) {
+        return "CPF inválido: todos os dígitos são iguais.";
+    }
+
+    $soma = 0;
+    for ($i = 0; $i < 9; $i++) {
+        $soma += $cpfNumerico[$i] * (10 - $i);
+    }
+    $resto = $soma % 11;
+    $digitoVerificador1 = ($resto < 2) ? 0 : 11 - $resto;
+
+    $soma = 0;
+    for ($i = 0; $i < 10; $i++) {
+        $soma += $cpfNumerico[$i] * (11 - $i);
+    }
+    $resto = $soma % 11;
+    $digitoVerificador2 = ($resto < 2) ? 0 : 11 - $resto;
+
+    if ($cpfNumerico[9] != $digitoVerificador1 || $cpfNumerico[10] != $digitoVerificador2) {
+        return "CPF inválido.";
+    }
+
     return null;
 }
 
